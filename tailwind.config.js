@@ -1,5 +1,6 @@
-
 /** @type {import('tailwindcss').Config} */
+
+import laravel from 'laravel-vite-plugin';
 
 // const colors = require('tailwindcss/colors');
 
@@ -8,7 +9,6 @@ module.exports = {
     content: [
         "./resources/**/*.blade.php",
         "./resources/**/*.js",
-        "./resources/**/*.vue",
     ],
     theme: {
         extend: {},
@@ -19,15 +19,20 @@ module.exports = {
             xl: '1440px',
         },
         colors: {
-            // gray: colors.coolGray,
-            // blue: colors.lightBlue,
-            // red: colors.rose,
-            // pink: colors.fuchsia,
+            red: '#BF1E2D',
+            black: '#231F20',
+            white: '#FFFFFF',
+            grey: '#BFC2C9',
+            lightGrey: '#E9EAEC',
         },
         fontFamily: {
             sans: ['Graphik', 'sans-serif'],
-            // serif: ['Merriweather', 'serif'],
         },
     },
-    plugins: [],
+    plugins: [
+        laravel({
+            input: ['resources/front/css/app.css', 'resources/front/js/app.js'],
+            refresh: true,
+        }),
+    ]
 }

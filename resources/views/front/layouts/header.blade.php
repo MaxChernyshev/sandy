@@ -10,49 +10,66 @@
     @vite([
         'resources/front/css/app.css',
         'resources/front/js/app.js',
-        'resources/front/js/bootstrap.js',
         ])
 
 </head>
 
 <body>
 
-<header class="bg-gray-800 py-4">
-    <div class="container mx-auto flex items-center justify-between px-4">
-        <!-- Logo -->
-        <div class="w-1/4">
-            <img src="logo.png" alt="Logo" class="h-10">
-        </div>
-
-        <!-- Navigation Menu -->
-        <nav class="hidden md:flex w-3/4 items-center justify-end space-x-4">
-            <ul class="flex flex-wrap space-x-4 text-white text-sm">
-                <li><a href="#" class="hover:text-gray-300">Item 1</a></li>
-                <li><a href="#" class="hover:text-gray-300">Item 2</a></li>
-                <li><a href="#" class="hover:text-gray-300">Item 3</a></li>
-                <li><a href="#" class="hover:text-gray-300">Item 4</a></li>
-            </ul>
+<!-- Hero Section -->
+{{--<section id="hero">--}}
+<section id="hero" class="bg-red">
+    <!-- Hero Container -->
+    <div class="container max-w-4xl mx-auto px-6 py-12">
+        <!-- Menu/Logo Container -->
+        <nav class="flex items-center justify-between font-bold text-white">
+            <!-- Logo -->
+            <img src="{{ Vite::asset('resources/front/images/sandy_logo.png') }}" alt="Logo" class="h-20">
+            <!-- Menu -->
+            <div class="hidden h-10 font-Graphik md:flex md:space-x-8">
+                <div class="group">
+                    <a href="#">Kitchen</a>
+                    <div class="mx-2 group-hover:border-b group-hover:border-blue-50">
+                    </div>
+                </div>
+                <div class="group">
+                    <a href="#">Store</a>
+                    <div class="mx-2 group-hover:border-b group-hover:border-blue-50"></div>
+                </div>
+                <div class="group">
+                    <a href="#">Blog</a>
+                    <div class="mx-2 group-hover:border-b group-hover:border-blue-50"></div>
+                </div>
+                <div class="group">
+                    <a href="#">About</a>
+                    <div class="mx-2 group-hover:border-b group-hover:border-blue-50"></div>
+                </div>
+                <div class="group">
+                    <a href="#">Contact</a>
+                    <div class="mx-2 group-hover:border-b group-hover:border-blue-50"></div>
+                </div>
+            </div>
+            <!-- Hamburger Button -->
+            <div class="md:hidden">
+                <button
+                    id="menu-btn"
+                    type="button"
+                    class="z-40 block hamburger md:hidden focus:outline-none">
+                    <span class="hamburger-top"></span>
+                    <span class="hamburger-middle"></span>
+                    <span class="hamburger-bottom"></span>
+                </button>
+            </div>
         </nav>
-
-        <!-- Hamburger Menu (SM & MD) -->
-        <div class="md:hidden">
-            <button id="mobile-menu-button" class="text-white focus:outline-none">
-                <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24">
-                    <path fill-rule="evenodd" d="M4 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 5h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 5h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"></path>
-                </svg>
-            </button>
+        <!-- Mobile Menu -->
+        <div id="menu" class="absolute top-0 bottom-0 left-0 hidden flex-col self-end w-full min-h-screen py-1 pt-40 pl-12 space-y-3 text-lg text-white uppercase bg-black">
+            <a href="#" class="hover:text-pink-500">Kitchen</a>
+            <a href="#" class="hover:text-pink-500">Store</a>
+            <a href="#" class="hover:text-pink-500">Blog</a>
+            <a href="#" class="hover:text-pink-500">About</a>
+            <a href="#" class="hover:text-pink-500">Contact</a>
         </div>
     </div>
-
-    <!-- Dropdown Menu (SM & MD) -->
-    <div id="mobile-menu" class="md:hidden hidden bg-gray-800">
-        <ul class="text-white text-sm">
-            <li><a href="#" class="block py-2 px-4 hover:bg-gray-700">Item 1</a></li>
-            <li><a href="#" class="block py-2 px-4 hover:bg-gray-700">Item 2</a></li>
-            <li><a href="#" class="block py-2 px-4 hover:bg-gray-700">Item 3</a></li>
-            <li><a href="#" class="block py-2 px-4 hover:bg-gray-700">Item 4</a></li>
-        </ul>
-    </div>
-</header>
+</section>
 
 
