@@ -1,4 +1,5 @@
 <footer class="bg-black/75 text-white py-8">
+    <div class="container max-w-full min-h-12 hidden md:flex vyshyvanka-string"></div>
     <div class="container max-w-4xl mx-auto px-6 py-12">
         <div class="flex flex-wrap -mx-4">
             <div class="w-full sm:w-1/2 md:w-1/4 px-4 mb-4 sm:mb-0">
@@ -51,6 +52,7 @@
             </div>
         </div>
     </div>
+    <div class="container max-w-full min-h-12 hidden md:flex vyshyvanka-string"></div>
 </footer>
 
 </body>

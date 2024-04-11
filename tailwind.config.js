@@ -26,7 +26,7 @@ module.exports = {
             lightGrey: '#E9EAEC',
         },
         fontFamily: {
-            sans: ['Graphik', 'sans-serif'],
+            mySans: ['Bree Serif', 'sans-serif'],
         },
     },
     plugins: [
