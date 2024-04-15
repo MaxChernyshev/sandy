@@ -35,7 +35,7 @@
                     <div class="mx-2 group-hover:border-b group-hover:border-blue-50"></div>
                 </div>
                 <div class="group">
-                    <a href="#">Blog</a>
+                    <a href="{{ route('articles') }}">Blog</a>
                     <div class="mx-2 group-hover:border-b group-hover:border-blue-50"></div>
                 </div>
                 <div class="group">

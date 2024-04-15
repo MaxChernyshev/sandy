@@ -3,15 +3,21 @@
 namespace App\Http\Controllers\Front;
 
 use App\Http\Controllers\Controller;
+use App\Models\Category;
 use Illuminate\Http\Request;
+use App\Models\Article;
 
-class Article extends Controller
+class ArticleController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
+        $articles = Article::paginate(10);
+        $categories = Category::all();
+
+        return view('front.articles', compact('articles', 'categories'));
         //
     }
 
