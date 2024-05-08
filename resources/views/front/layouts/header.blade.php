@@ -22,7 +22,9 @@
         <!-- Menu/Logo Container -->
         <nav class="flex items-center justify-between text-white">
             <!-- Logo -->
+            <a href="{{ route('mainPage') }}">
             <img src="{{ Vite::asset('resources/front/images/sandy_logo.png') }}" alt="Logo" class="h-20">
+            </a>
             <!-- Menu -->
             <div class="hidden h-10 font-mySans md:flex md:space-x-8 text-2xl">
                 <div class="group">
